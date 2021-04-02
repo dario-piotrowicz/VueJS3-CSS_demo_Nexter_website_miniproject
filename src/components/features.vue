@@ -58,6 +58,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "src/assets/scss/colors";
+
 .features {
   grid-column: center-start / center-end;
 
@@ -76,7 +78,7 @@ export default {
   column-gap: 2.5rem;
 
   &__icon {
-    fill: #c69963;
+    fill: $primary-color;
     $size: 4.5rem;
     width: $size;
     height: $size;
