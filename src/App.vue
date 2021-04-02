@@ -1,4 +1,5 @@
 <template>
+  <svg-definitions></svg-definitions>
   <div class="app-container">
     <side-bar></side-bar>
     <hero></hero>
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import SvgDefs from "./SvgDefs";
 import "./assets/fonts/fonts.css";
 
 import Hero from "./components/hero";
@@ -26,6 +28,7 @@ import Footer from "./components/footer";
 export default {
   name: "App",
   components: {
+    "svg-definitions": SvgDefs,
     hero: Hero,
     "side-bar": SideBar,
     realtors: Realtors,
