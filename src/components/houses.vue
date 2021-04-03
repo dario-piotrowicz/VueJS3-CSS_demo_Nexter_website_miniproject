@@ -96,6 +96,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "src/assets/scss/colors";
+
 .houses {
   grid-column: center-start / center-end;
 
@@ -109,8 +111,75 @@ export default {
 .house {
   background-color: #f9f7f6;
 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2.8rem;
+
   &__image {
     width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
+
+  &__name {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: end;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.25rem;
+    color: #fff;
+    background-color: $secondary-color;
+    width: 80%;
+    transform: translateY(50%);
+  }
+
+  &__location,
+  &__rooms {
+    margin-top: 2.5rem;
+  }
+
+  &__location,
+  &__rooms,
+  &__area,
+  &__price {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      fill: $primary-color;
+      $size: 2rem;
+      height: $size;
+      width: $size;
+      margin-right: 1rem;
+    }
+
+    &-text {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #b28451;
+    }
   }
 }
 </style>
