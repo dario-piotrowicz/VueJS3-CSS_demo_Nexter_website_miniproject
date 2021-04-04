@@ -45,6 +45,10 @@ export default {
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 50%;
+  }
 }
 
 * {
