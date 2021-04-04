@@ -82,10 +82,7 @@ body {
   }
 
   @media only screen and (max-width: 850px) {
-    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 100rem repeat(
-        3,
-        min-content
-      );
+    grid-template-rows: 6rem calc(100vh - 6rem);
   }
 }
 </style>

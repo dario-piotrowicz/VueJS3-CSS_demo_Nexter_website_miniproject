@@ -74,7 +74,7 @@ export default {
     row-gap: 5vh;
     align-items: center;
 
-    @media only screen and (max-width: 850px) {
+    @media only screen and (min-width: 600px) and (max-width: 850px) {
       grid-template-columns: repeat(3, min-content max-content);
     }
   }
