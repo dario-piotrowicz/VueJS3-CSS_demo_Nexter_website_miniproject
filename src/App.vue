@@ -80,5 +80,12 @@ body {
       [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
       [center-end] minmax(6rem, 1fr) [content-end];
   }
+
+  @media only screen and (max-width: 850px) {
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(
+        3,
+        min-content
+      );
+  }
 }
 </style>

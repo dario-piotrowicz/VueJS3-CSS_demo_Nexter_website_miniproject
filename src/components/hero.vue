@@ -35,6 +35,11 @@
 
 .hero {
   grid-column: content-start / col-end 6;
+
+  @media only screen and (max-width: 850px) {
+    grid-column: 1 / -1;
+  }
+
   background-image: linear-gradient(
       transparentize($secondary-color, 0.07),
       transparentize($secondary-color, 0.07)

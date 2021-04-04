@@ -45,8 +45,13 @@ export default {
 @import "src/assets/scss/colors";
 
 .realtors {
-  background-color: $secondary-color;
   grid-column: col-start 7 / content-end;
+
+  @media only screen and (max-width: 850px) {
+    grid-column: 1 / -1;
+  }
+
+  background-color: $secondary-color;
   padding: 3rem;
   display: grid;
   align-content: center;
@@ -68,11 +73,21 @@ export default {
     column-gap: 2rem;
     row-gap: 5vh;
     align-items: center;
+
+    @media only screen and (max-width: 850px) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
   }
 
   &__picture {
     width: 7rem;
     border-radius: 50%;
+
+    &:not(:first-of-type) {
+      @media only screen and (max-width: 850px) {
+        margin-left: 1.5rem;
+      }
+    }
   }
 
   &__name {
