@@ -33,8 +33,18 @@
 
   display: flex;
 
+  @media only screen and (max-width: 850px) {
+    flex-direction: column-reverse;
+  }
+
   &__pictures {
     flex: 0 0 50%;
+
+    @media only screen and (max-width: 850px) {
+      flex: 2;
+      overflow: hidden;
+    }
+
     background-image: linear-gradient(
         rgba($primary-color, 0.5),
         rgba($primary-color, 0.5)
@@ -60,10 +70,20 @@
     grid-column: 4 / 7;
     z-index: 2;
     box-shadow: 0 2rem 5rem transparentize(#000, 0.8);
+    @media only screen and (max-width: 850px) {
+      width: 80%;
+      grid-row: 2 / 4;
+      grid-column: 4 / 7;
+    }
   }
 
   &__content {
     flex: 0 0 50%;
+
+    @media only screen and (max-width: 850px) {
+      flex: 1;
+    }
+
     background-color: #f9f7f6;
     padding: 6rem 8vw;
 
