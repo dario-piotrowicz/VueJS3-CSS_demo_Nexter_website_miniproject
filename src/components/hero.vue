@@ -51,6 +51,10 @@
   padding: 8rem;
   padding-top: 4rem;
 
+  @media only screen and (max-width: 600px) {
+    padding: 4rem;
+  }
+
   display: grid;
   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
   grid-template-columns: minmax(min-content, max-content);
