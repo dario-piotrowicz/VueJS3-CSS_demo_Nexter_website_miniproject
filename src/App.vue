@@ -66,11 +66,19 @@ body {
 
 .app-container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-auto-flow: row;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
     [sidebar-start] 8rem [sidebar-end content-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr) [content-end];
+
+  @media only screen and (max-width: 1000px) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [content-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr) [content-end];
+  }
 }
 </style>
